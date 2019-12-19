@@ -11,16 +11,20 @@
     </source>
 
 
-    <source name="cichlid-db" type="db">
+    <source name="cichlidDB" type="cichlidDB">
       <property name="source.db.name" value="XXXX"/>
       <property name="organisms" value="8127"/>
       <property name="dataSourceName" value="FlyBase"/>
-      <property name="processors"
+<!--      
+<property name="processors"
                 value="org.intermine.bio.dataconversion.FlyBaseProcessor
                        org.intermine.bio.dataconversion.StockProcessor"/>
+--> 
       <property name="converter.class"
-                value="org.intermine.bio.dataconversion.ChadoDBConverter"/>
-    </source>
+                value="org.intermine.bio.dataconversion.BioDBConverter"/>
+  
+
+ </source>
 
 
 <!--
