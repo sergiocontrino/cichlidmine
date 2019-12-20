@@ -14,7 +14,7 @@
     <source name="cichlidDB" type="cichlidDB">
       <property name="source.db.name" value="XXXX"/>
       <property name="organisms" value="8127"/>
-      <property name="dataSourceName" value="FlyBase"/>
+      <property name="dataSourceName" value="cichlid"/>
 <!--      
 <property name="processors"
                 value="org.intermine.bio.dataconversion.FlyBaseProcessor
