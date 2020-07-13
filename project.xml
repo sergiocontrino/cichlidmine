@@ -12,7 +12,7 @@
 
 
     <source name="cichlidDB" type="cichlidDB">
-      <property name="source.db.name" value="XXXX"/>
+      <property name="source.db.name" value="cich"/>
       <property name="organisms" value="8127"/>
       <property name="dataSourceName" value="cichlid"/>
 <!--      
