@@ -1,0 +1,102 @@
+# This file specifies the how to access local postgres databases used for
+# building and running and InterMine.bio warehouse.  Also some configuration
+# of InterMine behaviour.
+
+#######################
+# database properties #
+#######################
+
+# if true will log details about execution time of every query
+os.production.verboseQueryLog=true
+
+# Access to the postgres database to build into and access from the webapp
+db.production.datasource.serverName=localhost
+db.production.datasource.databaseName=cichlidmine
+db.production.datasource.user=username
+db.production.datasource.password=password
+
+# Temporary database used during the build process, this is re-built
+# as sources are loaded and can be discarded once the warehouse build is complete
+# It uses the InterMine 'items' metadata format to describe objects.
+
+# common target items database
+db.common-tgt-items.datasource.serverName=localhost
+db.common-tgt-items.datasource.databaseName=items-cichlidmine
+db.common-tgt-items.datasource.user=username
+db.common-tgt-items.datasource.password=password
+
+
+# userprofile database - used by the webapp to store logins, query history,
+# saved bags, templates and tags.
+db.userprofile-production.datasource.serverName=localhost
+db.userprofile-production.datasource.databaseName=userprofile-cichlidmine
+db.userprofile-production.datasource.user=username
+db.userprofile-production.datasource.password=password
+
+
+#
+# cichlid mysql db
+#
+
+db.cich.datasource.serverName=localhost
+db.cich.datasource.databaseName=cich
+db.cich.datasource.user=username
+db.cich.datasource.password=password
+db.cich.datasource.class=com.zaxxer.hikari.HikariDataSource
+db.cich.datasource.dataSourceClassName=com.mysql.cj.jdbc.MysqlDataSource
+db.cich.datasource.dataSourceName=db.cich
+db.cich.datasource.maxConnections=10
+db.cich.driver=com.mysql.jdbc.Driver
+db.cich.platform=mysql
+db.cich.port=3306
+
+#db.cich.datasource.class=com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource
+#db.cich.driver=com.mysql.cj.jdbc.Driver
+#db.cich.platform=MySQL
+#db.cich.datasource.jdbcUrl=jdbc:mysql://localhost:3306/cich
+
+# files for ID resolvers
+#resolver.file.rootpath=/DATA/idresolver
+
+#####################
+# webapp properties #
+#####################
+
+# tomcat username and password needed to deploy webapp
+webapp.manager=name
+webapp.password=pw
+
+# Web application deployment properties
+
+# location of tomcat server and path of webapp - e.g. access http://localhost:8080/malariamine
+webapp.deploy.url=http://localhost:8080
+webapp.path=cichlidmine
+
+# 'Home' link
+webapp.baseurl=http://localhost:8080
+
+# account name for superuser (who can edit appearance and publish templates)
+superuser.account=user@institute.org
+superuser.initialPassword=secret
+
+# run with no associated web site
+project.standalone=true
+
+# details for sending login e-mails
+mail.host=localhost
+mail.from=account@my_mail_host
+mail.subject=Welcome to MalariaMine
+mail.text=You have successfully created an account on MalariaMine
+
+# text that appears in the header and elsewhere
+project.title=CichlidMine
+project.subTitle=An example of InterMine.bio with data from <i>fish</i>
+project.releaseVersion=starting
+
+# various URLs use this as the prefix
+project.sitePrefix=http://www.flymine.org
+project.helpLocation=http://www.flymine.org/help
+
+# recipient of feedback form located on bottom of every page
+feedback.destination = test_user@mail_address
+
