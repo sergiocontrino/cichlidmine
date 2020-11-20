@@ -18,6 +18,7 @@ dependencies {
     compile group: "org.intermine", name: "bio-core", version: System.getProperty("bioVersion"), transitive: false
     compile group: "org.intermine", name: "intermine-integrate", version: System.getProperty("imVersion")
     compile group: "org.intermine", name: "intermine-resources", version: System.getProperty("imVersion") // for log4j
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
     compile fileTree(dir: 'libs', include: '*.jar')
     bioModel group: "org.intermine", name: "bio-model", version: System.getProperty("bioVersion"), transitive: false
 }
