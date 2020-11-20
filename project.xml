@@ -15,16 +15,9 @@
       <property name="source.db.name" value="cich"/>
       <property name="organisms" value="8127"/>
       <property name="dataSourceName" value="cichlid"/>
-<!--      
-<property name="processors"
-                value="org.intermine.bio.dataconversion.FlyBaseProcessor
-                       org.intermine.bio.dataconversion.StockProcessor"/>
---> 
       <property name="converter.class"
                 value="org.intermine.bio.dataconversion.BioDBConverter"/>
-  
-
- </source>
+    </source>
 
 
 <!--
